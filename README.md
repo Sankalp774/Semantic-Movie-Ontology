@@ -8,6 +8,7 @@ Populate it with sample data or fetch real movie details from DBpedia (e.g., for
 Perform local and federated SPARQL queries to retrieve insights (e.g., movies released after 2000).
 Interact via a simple UI (Tkinter-based app for fetching data and running queries).
 
+
 It's ideal for educational purposes, semantic web coursework, or as a foundation for movie recommendation systems, knowledge graphs, or AI-driven film analysis.
 Features
 
@@ -20,6 +21,7 @@ Extensibility: Easily add more movies, properties, or integrate other RDF source
 Cross-Platform: Runs on Windows/macOS/Linux with Python 3.8+.
 
 Installation
+
 Prerequisites
 
 Python 3.8 or higher (download from python.org).
@@ -27,7 +29,7 @@ Java (for OWLReady2 reasoning; download from oracle.com or adoptium.net).
 
 Steps
 
-Clone the repository:textgit clone https://github.com/yourusername/movies-ontology-project.git
+Clone the repository:textgit clone (https://github.com/Sankalp774/Semantic-Movie-Ontology)
 cd movies-ontology-project
 Install dependencies:textpip install owlready2 rdflib SPARQLWrapper(For UI: Tkinter is built-in with Python; no extra install needed.)
 (Optional) Install Protégé for ontology visualization: Download from protege.stanford.edu.
