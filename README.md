@@ -1,61 +1,30 @@
-# Semantic Movie Ontology — Knowledge Graphs for AI Systems
+# Semantic Movie Ontology — Knowledge Graphs
 
-OWL + SPARQL project demonstrating **symbolic AI / knowledge graphs** — a differentiator next to pure neural projects.
+> **Academic stage:** **4th year** / advanced elective-style · **Created:** December 2025  
+> **Learning focus:** **Semantic web** · OWL ontologies · RDF triples · SPARQL · reasoning · linked data (DBpedia) · symbolic AI vs neural AI
 
-```text
-OWL schema (Movie, Actor, Director, Genre)
-  → sample individuals
-  → optional DBpedia enrichment
-  → HermiT-style reasoning (owlready2)
-  → SPARQL suite → metrics/sparql_report.json
-  → Tkinter explorer
-```
+## About
 
-## Why this matters for AI/ML hiring
+Build and query a movie knowledge graph — complementary skill to pure deep learning.
 
-Modern Applied AI stacks combine:
+## What I learned
 
-- **neural** retrieval/generation  
-- **symbolic** structure (ontologies, constraints, tool schemas)
-
-This repo proves you understand RDF/OWL/SPARQL — rare for freshers.
+| Topic | How this project taught it |
+|-------|----------------------------|
+| Knowledge representation | Classes, properties, individuals |
+| OWL / owlready2 | Schema + sample population |
+| SPARQL | Structured queries over the graph |
+| Linked data | DBpedia enrichment |
+| Symbolic AI | When graphs beat pure embeddings |
 
 ## Quickstart
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-
-python movies_ontology.py          # create/populate OWL
-python query_ontology.py           # classic demos
-python -m kg.query_suite           # JSON metrics report
-python app_tkinter.py              # UI
-# optional network:
-python integrate_dbpedia.py
+python movies_ontology.py
+python -m kg.query_suite
+python app_tkinter.py
 ```
-
-## Core artifacts
-
-| File | Role |
-|------|------|
-| `movies_ontology.py` | Schema + sample graph |
-| `movies_ontology.owl` | Serialized ontology |
-| `integrate_dbpedia.py` | Linked data import |
-| `kg/query_suite.py` | Evaluatable SPARQL suite |
-| `app_tkinter.py` | Lightweight explorer |
-
-## Interview prompts you can answer
-
-- Difference between RDF triple and property graph  
-- Why inverse properties matter (`hasActor` ↔ `actedIn`)  
-- When to use SPARQL vs vector search  
-- How a KG can ground an LLM agent (tool: `query_movies`)  
-
-## Limitations
-
-- Educational scale graph  
-- DBpedia availability varies  
-- Not a neural recommender (see Mood-Movie-Recs-AI for that)  
 
 ## Author
 
