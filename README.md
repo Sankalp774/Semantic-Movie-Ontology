@@ -1,60 +1,62 @@
-# Semantic Movie Ontology
+# Semantic Movie Ontology — Knowledge Graphs for AI Systems
 
-Educational **knowledge graph / semantic web** project: define a movie OWL ontology, populate sample data, optionally enrich from **DBpedia**, reason, and query with **SPARQL**. Includes a small **Tkinter** UI.
+OWL + SPARQL project demonstrating **symbolic AI / knowledge graphs** — a differentiator next to pure neural projects.
 
-## Concepts demonstrated
+```text
+OWL schema (Movie, Actor, Director, Genre)
+  → sample individuals
+  → optional DBpedia enrichment
+  → HermiT-style reasoning (owlready2)
+  → SPARQL suite → metrics/sparql_report.json
+  → Tkinter explorer
+```
 
-- OWL classes & properties (`Movie`, `Actor`, `Director`, `Genre`, …)  
-- Inverse properties (`hasActor` ↔ `actedIn`)  
-- Local ontology file: `movies_ontology.owl`  
-- Linked data fetch via DBpedia (SPARQLWrapper)  
-- SPARQL queries over local graph  
+## Why this matters for AI/ML hiring
 
-## Stack
+Modern Applied AI stacks combine:
 
-- Python 3.8+  
-- [owlready2](https://owlready2.readthedocs.io/)  
-- rdflib, SPARQLWrapper  
-- Tkinter (stdlib UI)  
-- Java runtime recommended for HermiT reasoner (owlready2)
+- **neural** retrieval/generation  
+- **symbolic** structure (ontologies, constraints, tool schemas)
 
-## Setup
+This repo proves you understand RDF/OWL/SPARQL — rare for freshers.
+
+## Quickstart
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+
+python movies_ontology.py          # create/populate OWL
+python query_ontology.py           # classic demos
+python -m kg.query_suite           # JSON metrics report
+python app_tkinter.py              # UI
+# optional network:
+python integrate_dbpedia.py
 ```
 
-## Scripts
+## Core artifacts
 
-| Script | Purpose |
-|--------|---------|
-| `movies_ontology.py` | Create schema + sample individuals → `movies_ontology.owl` |
-| `add_movies_fixed.py` | Add / fix movie individuals |
-| `integrate_dbpedia.py` | Pull movie facts from DBpedia |
-| `query_ontology.py` | Example SPARQL queries |
-| `app_tkinter.py` | Minimal desktop UI |
+| File | Role |
+|------|------|
+| `movies_ontology.py` | Schema + sample graph |
+| `movies_ontology.owl` | Serialized ontology |
+| `integrate_dbpedia.py` | Linked data import |
+| `kg/query_suite.py` | Evaluatable SPARQL suite |
+| `app_tkinter.py` | Lightweight explorer |
 
-```bash
-python movies_ontology.py
-python integrate_dbpedia.py   # needs network
-python query_ontology.py
-python app_tkinter.py
-```
+## Interview prompts you can answer
 
-## What I built
-
-- Hands-on knowledge graph modeling for a domain (movies)  
-- Bridge between local OWL data and open linked data (DBpedia)  
-- Query + UI path for non-CLI demos  
+- Difference between RDF triple and property graph  
+- Why inverse properties matter (`hasActor` ↔ `actedIn`)  
+- When to use SPARQL vs vector search  
+- How a KG can ground an LLM agent (tool: `query_movies`)  
 
 ## Limitations
 
-- Small sample graph — not a production recommendation engine  
-- DBpedia availability / schema drift can break fetches  
-- UI is intentionally minimal  
+- Educational scale graph  
+- DBpedia availability varies  
+- Not a neural recommender (see Mood-Movie-Recs-AI for that)  
 
-## License
+## Author
 
-Educational / portfolio use.
+Sankalp Sahu
