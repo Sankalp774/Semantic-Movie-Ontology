@@ -1,7 +1,7 @@
 # Semantic Movie Ontology — Knowledge Graphs
 
-> **Academic stage:** **4th year** / advanced elective-style · **Created:** December 2025  
-> **Learning focus:** **Semantic web** · OWL ontologies · RDF triples · SPARQL · reasoning · linked data (DBpedia) · symbolic AI vs neural AI
+> **Created:** (2025-12-06)  
+> **Latest update:** (2026-07-22) — SPARQL query suite + knowledge-graph metrics report
 
 ## About
 
